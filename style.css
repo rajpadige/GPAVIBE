@@ -1,0 +1,167 @@
+/* ------------------- GENERAL BODY ------------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f8fa;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Headers */
+h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Inputs and Selects */
+input, select {
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 250px;
+}
+
+/* ------------------- BUTTONS ------------------- */
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Navigation Buttons */
+#navigation-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ------------------- SECTIONS ------------------- */
+#cumulative-gpa-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#previous-semester-section, 
+#current-semester-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ------------------- TABLES ------------------- */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #eef6ff;
+}
+
+tr.selected {
+    background-color: #cce5ff !important;
+}
+
+/* Subject & Semester Cards */
+.subject-box, .semester-box {
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ------------------- MODALS ------------------- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+#grading-scale-table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#grading-scale-table th, #grading-scale-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+#grading-scale-table input {
+    width: 60px;
+}
+
+/* ------------------- UTILITIES ------------------- */
+.hidden {
+    display: none;
+}
+
+/* ------------------- RESPONSIVENESS ------------------- */
+@media (max-width: 600px) {
+    input, select, button {
+        width: 90%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}

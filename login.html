@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - GPAVIBE</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase + FirebaseUI CSS and JS -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/6.0.2/firebaseui.css" />
+</head>
+
+<body>
+
+  <h2 style="text-align: center;">🎓 Welcome to GPAVIBE!</h2>
+  <h3 style="text-align: center;">Login or Create Your Account</h3>
+
+  <div id="firebaseui-auth-container"></div> <!-- Important -->
+
+  <!-- Firebase + FirebaseUI JavaScript -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import * as firebaseui from "https://cdn.firebase.com/libs/firebaseui/6.0.2/firebaseui.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyC4rzlIcdZgmjG4-4aSCZsj1Ql1GPVuZRQ",
+      authDomain: "gpavibe.firebaseapp.com",
+      projectId: "gpavibe",
+      storageBucket: "gpavibe.firebasestorage.app",
+      messagingSenderId: "703511037871",
+      appId: "1:703511037871:web:3b754aea20026cf5bad15a",
+      measurementId: "G-PWCHP3HR7J"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const ui = new firebaseui.auth.AuthUI(auth);
+
+    const uiConfig = {
+      signInSuccessUrl: 'index.html',
+      signInOptions: [
+        getAuth().EmailAuthProvider.PROVIDER_ID
+      ],
+    };
+
+    ui.start('#firebaseui-auth-container', uiConfig);
+  </script>
+
+</body>
+</html>
